@@ -1,0 +1,144 @@
+<!-- Miniheader -->
+<div class="miniheader" [ngClass]="{ 'hidden': isMiniHeaderHidden }">
+  <span>
+    📍 Carr. Niebla, Km 6, 21840 Niebla, Huelva | 
+    📞 648 05 39 50 | 
+    ✉️ fincalareunida&#64;gmail.com
+  </span>
+</div>
+
+<!-- Header principal -->
+<header class="header" [ngClass]="{ 'mini-hidden': isMiniHeaderHidden, 'mini-visible': !isMiniHeaderHidden }">
+  <div class="container">
+    <div class="logo">
+      <img src="assets/logo.png" alt="La Reunida">
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li><a routerLink="/">Inicio</a></li>
+        <li><a routerLink="/nosotros">Nosotros</a></li>
+        <li><a routerLink="/servicios">Servicios</a></li>
+        <li><a routerLink="/blog">Blog</a></li>
+        <li><a routerLink="/contacto">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Sección principal -->
+<section class="inicio">
+  <div class="overlay">
+    <h1>Bienvenidos a La Reunida</h1>
+    <p class="subtitulo">Un lugar exclusivo para celebrar momentos inolvidables.</p>
+  </div>
+</section>
+
+<!-- Sección de presentación -->
+<section class="descripcion">
+  <div class="container">
+    <div class="descripcion-contenido">
+      <div class="texto">
+        <h2>Descubre La Reunida</h2>
+        <p>
+          Situada en el corazón de Huelva, La Reunida ofrece un entorno único y exclusivo
+          para bodas y eventos inolvidables. Rodeada de naturaleza y tradición andaluza,
+          nuestra finca es el lugar perfecto para tu celebración.
+        </p>
+        <p>
+          Finca La Reunida se encuentra ubicada en el municipio de Niebla, un pueblo situado a 39 kilómetros de Huelva,
+          es una antigua finca de labor del Siglo XIV reformada y adaptada a la normativa y legislación vigente; mantiene por tanto
+          la esencia de las haciendas tradicionales andaluzas, dando un toque de distinción a cualquier evento que se precie.
+        </p>
+        <p>
+          Ponemos a disposición de nuestros clientes la posibilidad de celebrar una boda de ensueño en un marco incomparable,
+          un evento de empresa sin parangón, o cualquier actividad que tenga cabida en nuestras instalaciones.
+          Finca La Reunida es un lugar elegante y con clase que mantiene intacta la esencia del sur con su estructura original.
+        </p>
+      </div>
+      <div class="slider">
+        <ul id="slider-list">
+          <li><img src="assets/finca1.jpg" alt="Imagen 1"></li>
+          <li><img src="assets/finca2.jpg" alt="Imagen 2"></li>
+          <li><img src="assets/finca3.jpg" alt="Imagen 3"></li>
+          <li><img src="assets/finca4.jpg" alt="Imagen 4"></li>
+          <li><img src="assets/finca5.jpg" alt="Imagen 5"></li>
+          <li><img src="assets/finca6.jpg" alt="Imagen 5"></li>
+          <li><img src="assets/finca7.jpg" alt="Imagen 5"></li>
+          <li><img src="assets/finca8.jpg" alt="Imagen 5"></li>
+          <li><img src="assets/finca9.jpg" alt="Imagen 5"></li>
+          <li><img src="assets/finca10.jpg" alt="Imagen 5"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de servicios destacados -->
+<section class="servicios">
+  <div class="container">
+    <h2>Nuestros Servicios</h2>
+    <div class="servicios-grid">
+      <div class="servicio">
+        <h3>Bodas</h3>
+        <p>Un entorno idílico para hacer de tu boda un día inolvidable.</p>
+        <img src="assets/servicios1.jpg" alt="Bodas" class="imagen-servicio">
+      </div>
+      <div class="servicio">
+        <h3>Eventos Corporativos</h3>
+        <p>El mejor lugar para reuniones y celebraciones de empresa.</p>
+        <img src="assets/finca5.jpg" alt="Eventos Corporativos" class="imagen-servicio">
+      </div>
+      <div class="servicio">
+        <h3>Gastronomía</h3>
+        <p>Disfruta de la mejor cocina andaluza en un entorno único.</p>
+        <img src="assets/servicios3.jpg" alt="Gastronomía" class="imagen-servicio">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sección de galería -->
+<section class="galeria">
+  <div class="container">
+    <h2>Galería</h2>
+    <div class="galeria-grid">
+      <img src="assets/galeria1.jpg" alt="Imagen 1">
+      <img src="assets/galeria2.jpg" alt="Imagen 2">
+      <img src="assets/galeria3.jpg" alt="Imagen 3">
+      
+    </div>
+  </div>
+</section>
+
+<!-- Sección de contacto -->
+<section class="contacto">
+  <div class="container">
+    <h2>Contáctanos</h2>
+    <p>¿Tienes alguna pregunta? Envíanos un mensaje y te responderemos lo antes posible.</p>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<!-- Sección de ubicación -->
+<section class="ubicacion">
+  <div class="container">
+    <h2>Ubicación</h2>
+    <p>Encuéntranos en el corazón de Huelva.</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.8030216466824!2d-6.674093284690177!3d37.37123717983552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126bf9c7b6a06b%3A0x8c7c5d6c74123d63!2sNiebla%2C%20Huelva!5e0!3m2!1ses!2ses!4v1642532176402!5m2!1ses!2ses"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2024 La Reunida. Todos los derechos reservados.</p>
+  </div>
+</footer>

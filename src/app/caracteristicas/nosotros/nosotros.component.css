@@ -1,0 +1,21 @@
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff3e0;
+  
+    h1 {
+      color: #8b5e3c;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      text-align: center;
+      color: #444;
+    }
+  }
+  

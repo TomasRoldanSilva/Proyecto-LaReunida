@@ -1,0 +1,1141 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>la-reunida documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">la-reunida documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  InicioComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/caracteristicas/inicio/inicio.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>AfterViewInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-inicio</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./inicio.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./inicio.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isMiniHeaderHidden" >isMiniHeaderHidden</a>
+                            </li>
+                            <li>
+                                <a href="#isScrolled" >isScrolled</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#lastScrollTop" >lastScrollTop</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#onWindowScroll" >onWindowScroll</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#window:scroll" >window:scroll</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="window:scroll"></a>
+                    <span class="name">
+                        <span ><b>window:scroll</b></span>
+                        <a href="#window:scroll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>window:scroll()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="14"
+                                    class="link-to-prism">src/app/caracteristicas/inicio/inicio.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="23"
+                                    class="link-to-prism">src/app/caracteristicas/inicio/inicio.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onWindowScroll"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>onWindowScroll</b></span>
+                        <a href="#onWindowScroll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onWindowScroll()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@HostListener(&#x27;window:scroll&#x27;, undefined)<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="14"
+                                    class="link-to-prism">src/app/caracteristicas/inicio/inicio.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isMiniHeaderHidden"></a>
+                    <span class="name">
+                        <span ><b>isMiniHeaderHidden</b></span>
+                        <a href="#isMiniHeaderHidden"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/caracteristicas/inicio/inicio.component.ts:10</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isScrolled"></a>
+                    <span class="name">
+                        <span ><b>isScrolled</b></span>
+                        <a href="#isScrolled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/caracteristicas/inicio/inicio.component.ts:9</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="lastScrollTop"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>lastScrollTop</b></span>
+                        <a href="#lastScrollTop"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/caracteristicas/inicio/inicio.component.ts:11</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, HostListener, AfterViewInit } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-inicio&#x27;,
+  templateUrl: &#x27;./inicio.component.html&#x27;,
+  styleUrls: [&#x27;./inicio.component.css&#x27;]
+})
+export class InicioComponent implements AfterViewInit {
+  isScrolled &#x3D; false;
+  isMiniHeaderHidden &#x3D; false;
+  private lastScrollTop &#x3D; 0;
+
+  @HostListener(&#x27;window:scroll&#x27;, [])
+  onWindowScroll() {
+    const scrollTop &#x3D; window.scrollY || document.documentElement.scrollTop;
+
+    // Oculta el miniheader cuando se desplaza hacia abajo
+    this.isMiniHeaderHidden &#x3D; scrollTop &gt; this.lastScrollTop &amp;&amp; scrollTop &gt; 50;
+
+    this.lastScrollTop &#x3D; scrollTop;
+  }
+
+  ngAfterViewInit() {
+    const sliderList &#x3D; document.getElementById(&quot;slider-list&quot;) as HTMLElement;
+    if (!sliderList) return;
+
+    const images &#x3D; Array.from(sliderList.children) as HTMLElement[];
+    let index &#x3D; 0;
+    const totalImages &#x3D; images.length;
+    const slideWidth &#x3D; images[0]?.clientWidth || 0;
+
+    function moveSlider() {
+      index++;
+
+      if (index &gt;&#x3D; totalImages) {
+        sliderList.style.transition &#x3D; &quot;transform 1s ease-in-out&quot;;
+        sliderList.style.transform &#x3D; &#x60;translateX(0px)&#x60;;
+
+        setTimeout(() &#x3D;&gt; {
+          sliderList.style.transition &#x3D; &quot;none&quot;;
+          index &#x3D; 0;
+          sliderList.style.transform &#x3D; &#x60;translateX(0px)&#x60;;
+        }, 1000);
+      } else {
+        sliderList.style.transition &#x3D; &quot;transform 1s ease-in-out&quot;;
+        sliderList.style.transform &#x3D; &#x60;translateX(-${index * slideWidth}px)&#x60;;
+      }
+    }
+
+    setInterval(moveSlider, 3000);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- Miniheader --&gt;
+&lt;div class&#x3D;&quot;miniheader&quot; [ngClass]&#x3D;&quot;{ &#x27;hidden&#x27;: isMiniHeaderHidden }&quot;&gt;
+  &lt;span&gt;
+    📍 Carr. Niebla, Km 6, 21840 Niebla, Huelva | 
+    📞 648 05 39 50 | 
+    ✉️ fincalareunida&amp;#64;gmail.com
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Header principal --&gt;
+&lt;header class&#x3D;&quot;header&quot; [ngClass]&#x3D;&quot;{ &#x27;mini-hidden&#x27;: isMiniHeaderHidden, &#x27;mini-visible&#x27;: !isMiniHeaderHidden }&quot;&gt;
+  &lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;div class&#x3D;&quot;logo&quot;&gt;
+      &lt;img src&#x3D;&quot;assets/logo.png&quot; alt&#x3D;&quot;La Reunida&quot;&gt;
+    &lt;/div&gt;
+    &lt;nav class&#x3D;&quot;navigation&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a routerLink&#x3D;&quot;/&quot;&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a routerLink&#x3D;&quot;/nosotros&quot;&gt;Nosotros&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a routerLink&#x3D;&quot;/servicios&quot;&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a routerLink&#x3D;&quot;/blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a routerLink&#x3D;&quot;/contacto&quot;&gt;Contáctanos&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;!-- Sección principal --&gt;
+&lt;section class&#x3D;&quot;inicio&quot;&gt;
+  &lt;div class&#x3D;&quot;overlay&quot;&gt;
+    &lt;h1&gt;Bienvenidos a La Reunida&lt;/h1&gt;
+    &lt;p class&#x3D;&quot;subtitulo&quot;&gt;Un lugar exclusivo para celebrar momentos inolvidables.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Sección de presentación --&gt;
+&lt;section class&#x3D;&quot;descripcion&quot;&gt;
+  &lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;div class&#x3D;&quot;descripcion-contenido&quot;&gt;
+      &lt;div class&#x3D;&quot;texto&quot;&gt;
+        &lt;h2&gt;Descubre La Reunida&lt;/h2&gt;
+        &lt;p&gt;
+          Situada en el corazón de Huelva, La Reunida ofrece un entorno único y exclusivo
+          para bodas y eventos inolvidables. Rodeada de naturaleza y tradición andaluza,
+          nuestra finca es el lugar perfecto para tu celebración.
+        &lt;/p&gt;
+        &lt;p&gt;
+          Finca La Reunida se encuentra ubicada en el municipio de Niebla, un pueblo situado a 39 kilómetros de Huelva,
+          es una antigua finca de labor del Siglo XIV reformada y adaptada a la normativa y legislación vigente; mantiene por tanto
+          la esencia de las haciendas tradicionales andaluzas, dando un toque de distinción a cualquier evento que se precie.
+        &lt;/p&gt;
+        &lt;p&gt;
+          Ponemos a disposición de nuestros clientes la posibilidad de celebrar una boda de ensueño en un marco incomparable,
+          un evento de empresa sin parangón, o cualquier actividad que tenga cabida en nuestras instalaciones.
+          Finca La Reunida es un lugar elegante y con clase que mantiene intacta la esencia del sur con su estructura original.
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;slider&quot;&gt;
+        &lt;ul id&#x3D;&quot;slider-list&quot;&gt;
+          &lt;li&gt;&lt;img src&#x3D;&quot;assets/finca1.jpg&quot; alt&#x3D;&quot;Imagen 1&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src&#x3D;&quot;assets/finca2.jpg&quot; alt&#x3D;&quot;Imagen 2&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src&#x3D;&quot;assets/finca3.jpg&quot; alt&#x3D;&quot;Imagen 3&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src&#x3D;&quot;assets/finca4.jpg&quot; alt&#x3D;&quot;Imagen 4&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src&#x3D;&quot;assets/finca5.jpg&quot; alt&#x3D;&quot;Imagen 5&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src&#x3D;&quot;assets/finca6.jpg&quot; alt&#x3D;&quot;Imagen 5&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src&#x3D;&quot;assets/finca7.jpg&quot; alt&#x3D;&quot;Imagen 5&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src&#x3D;&quot;assets/finca8.jpg&quot; alt&#x3D;&quot;Imagen 5&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src&#x3D;&quot;assets/finca9.jpg&quot; alt&#x3D;&quot;Imagen 5&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src&#x3D;&quot;assets/finca10.jpg&quot; alt&#x3D;&quot;Imagen 5&quot;&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Sección de servicios destacados --&gt;
+&lt;section class&#x3D;&quot;servicios&quot;&gt;
+  &lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;h2&gt;Nuestros Servicios&lt;/h2&gt;
+    &lt;div class&#x3D;&quot;servicios-grid&quot;&gt;
+      &lt;div class&#x3D;&quot;servicio&quot;&gt;
+        &lt;h3&gt;Bodas&lt;/h3&gt;
+        &lt;p&gt;Un entorno idílico para hacer de tu boda un día inolvidable.&lt;/p&gt;
+        &lt;img src&#x3D;&quot;assets/servicios1.jpg&quot; alt&#x3D;&quot;Bodas&quot; class&#x3D;&quot;imagen-servicio&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;servicio&quot;&gt;
+        &lt;h3&gt;Eventos Corporativos&lt;/h3&gt;
+        &lt;p&gt;El mejor lugar para reuniones y celebraciones de empresa.&lt;/p&gt;
+        &lt;img src&#x3D;&quot;assets/finca5.jpg&quot; alt&#x3D;&quot;Eventos Corporativos&quot; class&#x3D;&quot;imagen-servicio&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;servicio&quot;&gt;
+        &lt;h3&gt;Gastronomía&lt;/h3&gt;
+        &lt;p&gt;Disfruta de la mejor cocina andaluza en un entorno único.&lt;/p&gt;
+        &lt;img src&#x3D;&quot;assets/servicios3.jpg&quot; alt&#x3D;&quot;Gastronomía&quot; class&#x3D;&quot;imagen-servicio&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+
+&lt;!-- Sección de galería --&gt;
+&lt;section class&#x3D;&quot;galeria&quot;&gt;
+  &lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;h2&gt;Galería&lt;/h2&gt;
+    &lt;div class&#x3D;&quot;galeria-grid&quot;&gt;
+      &lt;img src&#x3D;&quot;assets/galeria1.jpg&quot; alt&#x3D;&quot;Imagen 1&quot;&gt;
+      &lt;img src&#x3D;&quot;assets/galeria2.jpg&quot; alt&#x3D;&quot;Imagen 2&quot;&gt;
+      &lt;img src&#x3D;&quot;assets/galeria3.jpg&quot; alt&#x3D;&quot;Imagen 3&quot;&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Sección de contacto --&gt;
+&lt;section class&#x3D;&quot;contacto&quot;&gt;
+  &lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;h2&gt;Contáctanos&lt;/h2&gt;
+    &lt;p&gt;¿Tienes alguna pregunta? Envíanos un mensaje y te responderemos lo antes posible.&lt;/p&gt;
+    &lt;form&gt;
+      &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Tu nombre&quot; required&gt;
+      &lt;input type&#x3D;&quot;email&quot; placeholder&#x3D;&quot;Tu correo&quot; required&gt;
+      &lt;textarea placeholder&#x3D;&quot;Tu mensaje&quot; required&gt;&lt;/textarea&gt;
+      &lt;button type&#x3D;&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Sección de ubicación --&gt;
+&lt;section class&#x3D;&quot;ubicacion&quot;&gt;
+  &lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;h2&gt;Ubicación&lt;/h2&gt;
+    &lt;p&gt;Encuéntranos en el corazón de Huelva.&lt;/p&gt;
+    &lt;iframe
+      src&#x3D;&quot;https://www.google.com/maps/embed?pb&#x3D;!1m18!1m12!1m3!1d3171.8030216466824!2d-6.674093284690177!3d37.37123717983552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126bf9c7b6a06b%3A0x8c7c5d6c74123d63!2sNiebla%2C%20Huelva!5e0!3m2!1ses!2ses!4v1642532176402!5m2!1ses!2ses&quot;
+      width&#x3D;&quot;100%&quot; height&#x3D;&quot;300&quot; style&#x3D;&quot;border:0;&quot; allowfullscreen&#x3D;&quot;&quot; loading&#x3D;&quot;lazy&quot;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Footer --&gt;
+&lt;footer class&#x3D;&quot;footer&quot;&gt;
+  &lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;p&gt;&amp;copy; 2024 La Reunida. Todos los derechos reservados.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./inicio.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/* Estilos generales */
+body {
+  font-family: &#x27;Poppins&#x27;, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #673636;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.miniheader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #d4a373;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.miniheader.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: #d4a373;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: top 0.3s ease-in-out;
+}
+
+.header.mini-hidden {
+  top: 0 !important;
+}
+
+.header.mini-visible {
+  top: 40px;
+}
+
+.header .logo img {
+  width: 60px;
+  margin-bottom: 5px;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: #b5838d;
+}
+
+
+/* Sección Inicio ajustada */
+.inicio {
+  height: 100vh;
+  background-image: url(&#x27;/assets/boda.jpg&#x27;);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  padding: 100px 20px; /* Mantiene el espaciado superior */
+  position: relative;
+}
+
+/* Texto sobre la imagen */
+.overlay {
+  position: absolute;
+  text-align: center; /* Centra el texto dentro del contenedor */
+  color: #d00808; /* Color rojo para el texto */
+  font-family: &#x27;Times New Roman&#x27;, serif; /* Cambiado a Times New Roman */
+  font-size: 2.5em; /* Tamaño reducido para mejor legibilidad */
+  font-weight: bold; /* Asegura que el texto sea más destacado */
+  line-height: 1.2; /* Espaciado entre líneas */
+  max-width: 80%; /* Limita el ancho del texto para que no se estire demasiado */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Añade sombra para mejorar visibilidad sobre la imagen */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los textos dentro del contenedor */
+}
+
+/* Título (h1) ajustado */
+h1 {
+  font-size: 1.5em; /* Tamaño ajustado para el título */
+  font-family: &#x27;Times New Roman&#x27;, serif; /* Cambiado a Times New Roman */
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 700; /* Hacemos el título más destacado */
+  line-height: 1.3; /* Mejora la legibilidad entre líneas */
+}
+
+/* Subtítulo ajustado */
+.subtitulo {
+  font-size: 1em; /* Tamaño más pequeño para el subtítulo */
+  font-family: &#x27;Times New Roman&#x27;, serif; /* Cambiado a Times New Roman */
+  color: #fff;
+  font-weight: 300;
+  margin-top: 10px; /* Espacio entre el título y el subtítulo */
+  max-width: 80%; /* Limita el ancho del subtítulo */
+  line-height: 1.5; /* Mejora la legibilidad del subtítulo */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Sombra ligera para el subtítulo */
+}
+
+
+/* Sección de Servicios */
+.servicios {
+  padding: 50px 0;
+  background-color: #fff3e0;
+  text-align: center;
+  font-family: &#x27;Times New Roman&#x27;, serif;
+  font-weight: 100;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.servicio {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagenes debajo de cada servicio */
+.imagen-servicio {
+  width: 100%;
+  height: auto;
+  margin-top: 15px; /* Espacio entre el texto y la imagen */
+  border-radius: 8px; /* Bordes redondeados para que combine con el estilo */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
+}
+
+
+
+
+
+
+
+
+
+
+/* Sección de Galería */
+.galeria {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Sección de contacto */
+.contacto {
+  padding: 50px 0;
+  background-color: #fff3e0;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-family: &#x27;Merriweather&#x27;, serif;
+  color: #8b5e3c;
+}
+
+.contacto p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  font-family: &#x27;Poppins&#x27;, sans-serif;
+  color: #333;
+}
+
+/* Estilización del formulario */
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contacto input,
+.contacto textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #d4a373;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+  border-color: #b5838d;
+  outline: none;
+}
+
+.contacto textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contacto button {
+  background-color: #b5838d;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.contacto button:hover {
+  background-color: #d4a373;
+}
+
+/* Footer */
+.footer {
+  background: #8b5e3c;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Slider */
+.slider-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-container img {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: center;
+}
+
+/* Sección de presentación */
+.descripcion {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.descripcion-contenido {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 30px;
+}
+
+.texto {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.texto h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-family: &#x27;Merriweather&#x27;, display;
+  color: #8b5e3c;
+}
+
+.texto p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: &#x27;Times New Roman&#x27;, serif;
+  color: #333;
+}
+
+.slider {
+  flex: 1;
+  width: 45%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+}
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: transform 1s ease-in-out;
+}
+
+.slider li {
+  min-width: 40%;
+  margin: 0 10px;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- Miniheader --><div class="miniheader" [ngClass]="{ \'hidden\': isMiniHeaderHidden }">  <span>    📍 Carr. Niebla, Km 6, 21840 Niebla, Huelva |     📞 648 05 39 50 |     ✉️ fincalareunida&#64;gmail.com  </span></div><!-- Header principal --><header class="header" [ngClass]="{ \'mini-hidden\': isMiniHeaderHidden, \'mini-visible\': !isMiniHeaderHidden }">  <div class="container">    <div class="logo">      <img src="assets/logo.png" alt="La Reunida">    </div>    <nav class="navigation">      <ul>        <li><a routerLink="/">Inicio</a></li>        <li><a routerLink="/nosotros">Nosotros</a></li>        <li><a routerLink="/servicios">Servicios</a></li>        <li><a routerLink="/blog">Blog</a></li>        <li><a routerLink="/contacto">Contáctanos</a></li>      </ul>    </nav>  </div></header><!-- Sección principal --><section class="inicio">  <div class="overlay">    <h1>Bienvenidos a La Reunida</h1>    <p class="subtitulo">Un lugar exclusivo para celebrar momentos inolvidables.</p>  </div></section><!-- Sección de presentación --><section class="descripcion">  <div class="container">    <div class="descripcion-contenido">      <div class="texto">        <h2>Descubre La Reunida</h2>        <p>          Situada en el corazón de Huelva, La Reunida ofrece un entorno único y exclusivo          para bodas y eventos inolvidables. Rodeada de naturaleza y tradición andaluza,          nuestra finca es el lugar perfecto para tu celebración.        </p>        <p>          Finca La Reunida se encuentra ubicada en el municipio de Niebla, un pueblo situado a 39 kilómetros de Huelva,          es una antigua finca de labor del Siglo XIV reformada y adaptada a la normativa y legislación vigente; mantiene por tanto          la esencia de las haciendas tradicionales andaluzas, dando un toque de distinción a cualquier evento que se precie.        </p>        <p>          Ponemos a disposición de nuestros clientes la posibilidad de celebrar una boda de ensueño en un marco incomparable,          un evento de empresa sin parangón, o cualquier actividad que tenga cabida en nuestras instalaciones.          Finca La Reunida es un lugar elegante y con clase que mantiene intacta la esencia del sur con su estructura original.        </p>      </div>      <div class="slider">        <ul id="slider-list">          <li><img src="assets/finca1.jpg" alt="Imagen 1"></li>          <li><img src="assets/finca2.jpg" alt="Imagen 2"></li>          <li><img src="assets/finca3.jpg" alt="Imagen 3"></li>          <li><img src="assets/finca4.jpg" alt="Imagen 4"></li>          <li><img src="assets/finca5.jpg" alt="Imagen 5"></li>          <li><img src="assets/finca6.jpg" alt="Imagen 5"></li>          <li><img src="assets/finca7.jpg" alt="Imagen 5"></li>          <li><img src="assets/finca8.jpg" alt="Imagen 5"></li>          <li><img src="assets/finca9.jpg" alt="Imagen 5"></li>          <li><img src="assets/finca10.jpg" alt="Imagen 5"></li>        </ul>      </div>    </div>  </div></section><!-- Sección de servicios destacados --><section class="servicios">  <div class="container">    <h2>Nuestros Servicios</h2>    <div class="servicios-grid">      <div class="servicio">        <h3>Bodas</h3>        <p>Un entorno idílico para hacer de tu boda un día inolvidable.</p>        <img src="assets/servicios1.jpg" alt="Bodas" class="imagen-servicio">      </div>      <div class="servicio">        <h3>Eventos Corporativos</h3>        <p>El mejor lugar para reuniones y celebraciones de empresa.</p>        <img src="assets/finca5.jpg" alt="Eventos Corporativos" class="imagen-servicio">      </div>      <div class="servicio">        <h3>Gastronomía</h3>        <p>Disfruta de la mejor cocina andaluza en un entorno único.</p>        <img src="assets/servicios3.jpg" alt="Gastronomía" class="imagen-servicio">      </div>    </div>  </div></section><!-- Sección de galería --><section class="galeria">  <div class="container">    <h2>Galería</h2>    <div class="galeria-grid">      <img src="assets/galeria1.jpg" alt="Imagen 1">      <img src="assets/galeria2.jpg" alt="Imagen 2">      <img src="assets/galeria3.jpg" alt="Imagen 3">          </div>  </div></section><!-- Sección de contacto --><section class="contacto">  <div class="container">    <h2>Contáctanos</h2>    <p>¿Tienes alguna pregunta? Envíanos un mensaje y te responderemos lo antes posible.</p>    <form>      <input type="text" placeholder="Tu nombre" required>      <input type="email" placeholder="Tu correo" required>      <textarea placeholder="Tu mensaje" required></textarea>      <button type="submit">Enviar</button>    </form>  </div></section><!-- Sección de ubicación --><section class="ubicacion">  <div class="container">    <h2>Ubicación</h2>    <p>Encuéntranos en el corazón de Huelva.</p>    <iframe      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.8030216466824!2d-6.674093284690177!3d37.37123717983552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126bf9c7b6a06b%3A0x8c7c5d6c74123d63!2sNiebla%2C%20Huelva!5e0!3m2!1ses!2ses!4v1642532176402!5m2!1ses!2ses"      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  </div></section><!-- Footer --><footer class="footer">  <div class="container">    <p>&copy; 2024 La Reunida. Todos los derechos reservados.</p>  </div></footer></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BlogComponent', 'selector': 'app-blog'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'GaleriaComponent', 'selector': 'app-galeria'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'NosotrosComponent', 'selector': 'app-nosotros'},{'name': 'ServiciosComponent', 'selector': 'app-servicios'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'InicioComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'InicioComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

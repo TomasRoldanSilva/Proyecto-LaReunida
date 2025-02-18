@@ -1,0 +1,39 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": [
+      "node"
+    ],
+    
+    "baseUrl": "./",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2015",
+    "lib": ["es2018", "dom"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "noImplicitReturns": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "e2e"
+  ],
+  "files": [
+    "src/main.ts",
+    "src/main.server.ts",
+    "server.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ],
+   
+  "incluir" :  [ "src/**/*.ts" ] , 
+  "excluir" :  [ "src/test.ts" ,  "src/**/*.spec.ts" ,  "src/app/file-to-exclude.ts" ] 
+
+}

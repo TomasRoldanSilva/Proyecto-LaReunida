@@ -1,0 +1,33 @@
+<section class="contacto">
+    <h1>Contáctanos</h1>
+    <p>Déjanos un mensaje y te responderemos lo antes posible.</p>
+  
+    <form [formGroup]="contactoForm" (ngSubmit)="enviarFormulario()">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" type="text" formControlName="nombre" placeholder="Tu nombre">
+        <div class="error" *ngIf="contactoForm.get('nombre')?.invalid && contactoForm.get('nombre')?.touched">
+          El nombre es obligatorio y debe tener al menos 3 caracteres.
+        </div>
+      </div>
+  
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" type="email" formControlName="email" placeholder="Tu correo electrónico">
+        <div class="error" *ngIf="contactoForm.get('email')?.invalid && contactoForm.get('email')?.touched">
+          Ingresa un email válido.
+        </div>
+      </div>
+  
+      <div>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" formControlName="mensaje" placeholder="Escribe tu mensaje"></textarea>
+        <div class="error" *ngIf="contactoForm.get('mensaje')?.invalid && contactoForm.get('mensaje')?.touched">
+          El mensaje es obligatorio y debe tener al menos 10 caracteres.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="contactoForm.invalid">Enviar</button>
+    </form>
+  </section>
+  
