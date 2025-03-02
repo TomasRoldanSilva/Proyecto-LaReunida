@@ -1,26 +1,105 @@
 .galeria {
-    padding: 50px;
-    background-color: #fff;
-    text-align: center;
-  
-    h1 {
-      font-size: 2.5rem;
-      color: #8b5e3c;
-      margin-bottom: 20px;
-    }
-  
-    .galeria-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-  
-    .galeria-img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+  color: #4a4a4a;
+  font-family: 'Lora', serif;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #8b5e3c;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.galeria-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.division {
+  height: 2px;
+  background-color: #8b5e3c;
+  margin: 40px 0;
+  opacity: 0.4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-nosotros img {
+  width: 150px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.logo-nosotros img:hover {
+  transform: scale(1.1);
+}
+
+.nav-nosotros ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.nav-nosotros li a {
+  color: #8b5e3c;
+  font-size: 1.1em;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-nosotros li a:hover {
+  color: #3a3a3a;
+  transform: translateY(-3px);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .galeria-img {
+      border-radius: 8px;
   }
-  
+  h1 {
+      font-size: 2.2rem;
+  }
+  .nav-nosotros ul {
+      flex-direction: column;
+      gap: 15px;
+  }
+  .nav-nosotros li a {
+      font-size: 1.2em;
+  }
+}
+/* Footer */
+.footer {
+  background: #8b5e3c;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}

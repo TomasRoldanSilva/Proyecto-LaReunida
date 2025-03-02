@@ -1,23 +1,49 @@
 <section class="servicios">
-    <h1>Servicios de La Reunida</h1>
-    <p>Descubre todo lo que tenemos para ofrecerte en tu día especial.</p>
-  
-    <div class="servicio-card">
-      <img src="assets/servicio1.jpg" alt="Servicio 1" class="servicio-img">
-      <h2>Bodas</h2>
-      <p>Espacios hermosos para bodas inolvidables.</p>
+  <div class="container">
+    <div class="logo-nosotros">
+      <img src="assets/logo.png" alt="Logo La Reunida">
     </div>
-  
-    <div class="servicio-card">
-      <img src="assets/servicio2.jpg" alt="Servicio 2" class="servicio-img">
-      <h2>Eventos Corporativos</h2>
-      <p>Contamos con instalaciones perfectas para reuniones de empresa.</p>
+
+    <nav class="nav-nosotros">
+      <ul>
+        <li><a routerLink="/">Inicio</a></li>
+        <li><a routerLink="/nosotros">Nosotros</a></li>
+        <li><a routerLink="/galeria">Galeria</a></li>
+        <li><a routerLink="/contacto">Contáctanos</a></li>
+      </ul>
+    </nav>
+
+    <div class="division"></div>
+
+    <div class="nosotros-header">
+      <h1>Servicios de La Reunida</h1>
+      <p>Descubre todo lo que tenemos para ofrecerte en tu día especial.</p>
     </div>
-  
-    <div class="servicio-card">
-      <img src="assets/servicio3.jpg" alt="Servicio 3" class="servicio-img">
-      <h2>Fiestas y Celebraciones</h2>
-      <p>Espacios ideales para cualquier tipo de celebración.</p>
+
+    <div class="servicio-container">
+      <div *ngFor="let servicio of servicios" class="servicio-card" (click)="seleccionarServicio(servicio)">
+        <img [src]="servicio.imagen" [alt]="servicio.titulo" class="servicio-img">
+        <h2>{{ servicio.titulo }}</h2>
+        <p class="ver-mas">Haz clic para más información</p>
+      </div>
     </div>
-  </section>
-  
+
+    <div *ngIf="servicioSeleccionado" class="servicio-detalle">
+      <h2>{{ servicioSeleccionado.titulo }}</h2>
+      <p>{{ servicioSeleccionado.descripcion }}</p>
+      
+      <ul class="detalle-lista">
+        <li *ngFor="let detalle of servicioSeleccionado.detalles">
+          <strong>{{ detalle.titulo }}:</strong> {{ detalle.descripcion }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 La Reunida. Todos los derechos reservados.</p>
+  </div>
+</footer>

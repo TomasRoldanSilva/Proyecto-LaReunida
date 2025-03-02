@@ -1,57 +1,182 @@
 .servicios {
-    padding: 50px;
-    background-color: #f1f1f1;
-    text-align: center;
-  
-    h1 {
-      font-size: 2.5rem;
-      color: #8b5e3c;
-      margin-bottom: 20px;
-    }
-  
-    p {
-      font-size: 1.2rem;
-      color: #444;
-      margin-bottom: 40px;
-    }
-  
-    .servicio-card {
-      display: inline-block;
-      width: 30%;
-      margin: 15px;
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: transform 0.3s ease-in-out;
-  
-      &:hover {
-        transform: translateY(-10px);
-      }
-  
-      .servicio-img {
-        width: 100%;
-        height: auto;
-      }
-  
-      h2 {
-        font-size: 1.8rem;
-        margin: 15px 0;
-        color: #8b5e3c;
-      }
-  
-      p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-        color: #777;
-      }
-    }
-  
-    @media (max-width: 768px) {
-      .servicio-card {
-        width: 100%;
-      }
-    }
+  padding: 50px;
+  background-color: #f9f5f0;
+  text-align: center;
+}
+
+.nosotros-header h1 {
+  font-size: 2.5rem;
+  color: #8b5e3c;
+  margin-bottom: 20px;
+  font-family: 'Merriweather', serif;
+}
+
+.nosotros-header p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 40px;
+  font-family: 'Merriweather', serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo */
+.logo-nosotros img {
+  width: 120px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.logo-nosotros img:hover {
+  transform: scale(1.1);
+}
+
+/* Navegación */
+.nav-nosotros ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.nav-nosotros li a {
+  color: #8b5e3c;
+  font-size: 1.1em;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-nosotros li a:hover {
+  color: #3a3a3a;
+  transform: translateY(-3px);
+}
+
+/* División */
+.division {
+  height: 1px;
+  background-color: #8b5e3c;
+  margin: 40px 0;
+  opacity: 0.5;
+}
+
+/* Tarjetas */
+.servicio-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.servicio-card {
+  width: 30%;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.servicio-img {
+  width: 100%;
+  height: auto;
+}
+
+.servicio-card h2 {
+  font-size: 1.8rem;
+  margin: 15px 0;
+  color: #8b5e3c;
+}
+
+.ver-mas {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.ver-mas:hover {
+  color: #8b5e3c;
+}
+
+/* Desplegable */
+.desplegable {
+  display: none;
+  padding: 20px;
+  background-color: #fff8f0;
+  border-top: 2px solid #8b5e3c;
+  border-radius: 0 0 12px 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease, padding-top 0.3s ease;
+}
+
+.servicio-card:hover .desplegable {
+  display: block;
+  opacity: 1;
+  padding-top: 20px;
+}
+
+/* Detalle del servicio */
+.servicio-detalle {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff8f0;
+  border: 1px solid #8b5e3c;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.servicio-detalle h2 {
+  font-size: 2rem;
+  color: #8b5e3c;
+}
+
+.detalle-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.detalle-lista li {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.detalle-lista li strong {
+  color: #8b5e3c;
+  font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .servicio-card {
+    width: 100%;
   }
-  
+}
+
+/* Footer */
+.footer {
+  background: #8b5e3c;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
